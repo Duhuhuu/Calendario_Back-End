@@ -1,4 +1,5 @@
 const express = require('express');
+const { dbConnection } = require('./database/config');
 require('dotenv').config();
 
 console.log(process.env)
@@ -7,8 +8,18 @@ console.log(process.env)
 
 const app = express();
 
+//base de datos
+
+dbConnection();
+
+//Lectura y parseo del body
+app.use( express.json() );
+
 //Directorio Publico
 app.use( express.static('public') );
+
+
+
 
 //rutas
 
