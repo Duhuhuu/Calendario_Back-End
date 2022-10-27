@@ -3,7 +3,7 @@ const { dbConnection } = require('./database/config');
 require('dotenv').config();
 const cors = require('cors');
 
-console.log(process.env)
+// console.log(process.env)
 
 //Crear el servidor express
 
@@ -29,6 +29,9 @@ app.use( express.static('public') );
 //rutas
 
 app.use( '/api/auth', require('./routes/auth') );
+
+app.use('/api/events', require('./routes/events') );
+
 //TODO: auth // crear, login, renew
 //TODO: CRUD: Eventos.
 
