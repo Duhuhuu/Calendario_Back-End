@@ -19,6 +19,7 @@ router.get('/',getEventos);
 router.post('/', [ // Middelware
 check('title', 'El title es obligatorio').not().isEmpty(),
 check('start', 'La fecha de inicio es obligatoria').custom(isDate),
+check('end', 'La fecha de Finalizacion es obligatoria').custom(isDate),
 
 validarCampos
 
