@@ -110,6 +110,7 @@ const revalidarTokens = async(req, res = response)=>{
     // console.log('Se solicito el /')
     res.json({
         ok: true,
+        uid, name,
         Token
     })
 };
