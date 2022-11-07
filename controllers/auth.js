@@ -11,7 +11,6 @@ const crearUsuario = async(req, res = response )=>{
     
     const { email, password } = req.body;
 
-
     try {
 
         let usuario = await Usuario.findOne({ email })
@@ -101,18 +100,25 @@ const loginUsuario = async(req, res = response) => {
 
 }
 
+// Revalidar el JWT opcion 1
 const revalidarTokens = async(req, res = response)=>{
 
     const uid = req.uid;
     const name = req.name;
-    const Token = await generarJWT(uid, name,)
+
+    // Lo mismo de arriba, pero mas cortito
+    //     const { uid, name } = req;
+
+    const token = await generarJWT(uid, name,)
 
     // console.log('Se solicito el /')
     res.json({
         ok: true,
-        Token
+        uid, name,
+        token
     })
 };
+
 
 
 module.exports = {

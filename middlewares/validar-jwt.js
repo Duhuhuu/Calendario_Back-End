@@ -25,7 +25,7 @@ const token = req.header('x-token');
         req.uid = uid;
         req.name = name;
 
-        console.log(uid,name);
+        //console.log(uid,name);
 
     } catch (error) {
         return res.status(401).json({

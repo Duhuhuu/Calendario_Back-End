@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "postinstall": "tsc",
     "dev": "nodemon index.js",
     "start": "node index.js"
   },

@@ -15,6 +15,7 @@ router.use( validarJWT );
 //Obtener Eventos.
 router.get('/',getEventos);
 
+
 //Crear un nuevo evento
 router.post('/', [ // Middelware
 check('title', 'El title es obligatorio').not().isEmpty(),
