@@ -24,7 +24,6 @@ router.post('/new',
     crearUsuario
 );
 
-
 router.post('/', 
     [ // Middelware
     check('email', 'El Email es obligatorio').isEmail(),
@@ -34,9 +33,6 @@ router.post('/',
     loginUsuario
 );
 
-
 router.get('/renew', validarJWT , revalidarTokens );
-
-
 
 module.exports = router;

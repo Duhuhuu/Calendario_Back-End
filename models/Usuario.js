@@ -6,7 +6,6 @@ const UsuarioSchema = Schema({
     name: {
         type: String,
         required: true
-
     },
     email: {
         type: String,
@@ -18,6 +17,5 @@ const UsuarioSchema = Schema({
         required: true
     }
 });
-
 
 module.exports = model('Usuario',UsuarioSchema );

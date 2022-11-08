@@ -35,5 +35,4 @@ validarCampos
 //Borar evento
 router.delete('/:id', eliminarEvento);
 
-
 module.exports= router;
